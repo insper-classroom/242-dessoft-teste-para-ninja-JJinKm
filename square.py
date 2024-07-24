@@ -12,9 +12,11 @@ class Square():
             if pygame.mouse.get_pressed()[0] == 1 and self.clicked == False:
                 self.clicked = True
                 action = True
+                pygame.draw.rect(surface,(255,255,255),self.rect)
         
         if pygame.mouse.get_pressed()[0] == 0:
             self.clicked = False
         
-        pygame.draw.rect(surface,color,self.rect)
+        if self.clicked == False:
+            pygame.draw.rect(surface,color,self.rect)
         return action
