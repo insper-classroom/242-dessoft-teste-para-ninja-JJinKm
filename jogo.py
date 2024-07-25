@@ -20,6 +20,7 @@ pygame.display.set_caption('Ninja')
 font = pygame.font.SysFont(None,78)
 jogar = font.render('Jogar',True,BLACK)
 jogar_rect = jogar.get_rect(center=(WIDTH/2,HEIGHT/2))
+
 clicked = False
 running = True
 state = 1
@@ -32,7 +33,7 @@ while running:
     pos = pygame.mouse.get_pos()
     window.fill(WHITE)
     window.blit(jogar,jogar_rect)
-    
+
     if jogar_rect.collidepoint(pos):
         if pygame.mouse.get_pressed()[0] == 1 and clicked == False:
             clicked = True
@@ -44,6 +45,7 @@ while running:
             end_screen(window,correct_counter)
             state = 1
             clicked = False
+            
     pygame.display.flip()
 
 pygame.quit()
