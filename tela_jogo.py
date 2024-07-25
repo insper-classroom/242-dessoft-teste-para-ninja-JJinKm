@@ -32,7 +32,7 @@ def game_screen(window):
     wrong = font.render('Errado!',True,BLACK)
 
     sum = font.render(str(rand_list[3]),True,BLACK)
-    sum_rect = sum.get_rect(center=(20,20))
+    sum_rect = sum.get_rect(center=(30,30))
 
     b_square = square.Square(450)
     g_square = square.Square(350)
@@ -42,7 +42,7 @@ def game_screen(window):
 
     counter = 60
     timer = font.render(str(counter),True,BLACK)
-    timer_rect = timer.get_rect(center=(780,20))
+    timer_rect = timer.get_rect(center=(770,30))
     pygame.time.set_timer(pygame.USEREVENT, 1000)
 
     vida = 3
