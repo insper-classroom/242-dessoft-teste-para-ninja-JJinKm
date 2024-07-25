@@ -58,7 +58,7 @@ def game_screen(window):
             if event.type == pygame.USEREVENT:
                 counter -= 1
                 timer = font.render(str(counter),True,BLACK)
-                timer_rect = timer.get_rect(center=(780,20))
+                timer_rect = timer.get_rect(center=(770,30))
 
         window.fill(WHITE)
 
@@ -89,7 +89,7 @@ def game_screen(window):
                 n_rect_list.append(n_rect)
             
             sum = font.render(str(rand_list[3]),True,BLACK)
-            sum_rect = sum.get_rect(center=(20,20))
+            sum_rect = sum.get_rect(center=(30,30))
 
         if g_square.draw(window,GREEN):
             print(rand_list[1])
@@ -116,7 +116,7 @@ def game_screen(window):
                 n_rect = n.get_rect(center=(WIDTH/2,500-100*(i)))
                 n_rect_list.append(n_rect)
             sum = font.render(str(rand_list[3]),True,BLACK)
-            sum_rect = sum.get_rect(center=(20,20))
+            sum_rect = sum.get_rect(center=(30,30))
 
         if r_square.draw(window,RED):
             print(rand_list[2])
@@ -143,7 +143,7 @@ def game_screen(window):
                 n_rect = n.get_rect(center=(WIDTH/2,500-100*(i)))
                 n_rect_list.append(n_rect)
             sum = font.render(str(rand_list[3]),True,BLACK)
-            sum_rect = sum.get_rect(center=(20,20))
+            sum_rect = sum.get_rect(center=(30,30))
 
 
         for i in range(len(n_list)):
