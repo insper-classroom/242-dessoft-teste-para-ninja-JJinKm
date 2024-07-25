@@ -18,6 +18,7 @@ def game_screen(window):
     clock = pygame.time.Clock()
 
     font = pygame.font.SysFont(None,48)
+
     rand_list = gera_numeros()
     n_rect_list = []
     n_list = []
@@ -77,6 +78,7 @@ def game_screen(window):
                 window.blit(wrong,wrong_rect)
                 pygame.display.flip()
                 pygame.time.wait(1000)
+
             rand_list = gera_numeros()
             n_rect_list = []
             n_list = []
@@ -85,6 +87,7 @@ def game_screen(window):
                 n_list.append(n)
                 n_rect = n.get_rect(center=(WIDTH/2,500-100*(i)))
                 n_rect_list.append(n_rect)
+            
             sum = font.render(str(rand_list[3]),True,BLACK)
             sum_rect = sum.get_rect(center=(20,20))
 

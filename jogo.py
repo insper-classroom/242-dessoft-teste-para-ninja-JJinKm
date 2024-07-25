@@ -32,6 +32,7 @@ while running:
     pos = pygame.mouse.get_pos()
     window.fill(WHITE)
     window.blit(jogar,jogar_rect)
+    
     if jogar_rect.collidepoint(pos):
         if pygame.mouse.get_pressed()[0] == 1 and clicked == False:
             clicked = True

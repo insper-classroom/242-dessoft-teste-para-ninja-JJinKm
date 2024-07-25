@@ -16,7 +16,6 @@ def end_screen(window,correct_counter):
     font = pygame.font.SysFont(None,48)
     score = font.render("Acertou: {0}".format(correct_counter),True,BLACK)
     score_rect = score.get_rect(center=(WIDTH/2,HEIGHT/2))
-    clicked = False
 
     while game:
         for event in pygame.event.get():
